@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herzform mit Canvas</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    canvas {
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+<canvas id="heartCanvas" width="600" height="600"></canvas>
+<script>
+  const canvas = document.getElementById('heartCanvas');
+  const ctx = canvas.getContext('2d');
+
+  // Herz-Funktion
+  const x = (t) => 16 * Math.pow(Math.sin(t), 3); // Parametrische x-Koordinate
+  const y = (t) => 13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t); // Parametrische y-Koordinate
+
+  // Skalierungsfaktor und Mittelpunkt
+  const scale = 15; // Skaliert die Herzform
+  const offsetX = canvas.width / 2;
+  const offsetY = canvas.height / 2;
+
+  // Herz zeichnen
+  ctx.beginPath();
+  for (let t = 0; t <= Math.PI * 2; t += 0.01) {
+    const px = x(t) * scale + offsetX; // Skaliert und verschiebt die x-Koordinate
+    const py = -y(t) * scale + offsetY; // Skaliert und verschiebt die y-Koordinate (invertieren, weil Canvas von oben nach unten zählt)
+    if (t === 0) {
+      ctx.moveTo(px, py); // Beginn des Pfads
+    } else {
+      ctx.lineTo(px, py); // Linie zu neuen Punkten
+    }
+  }
+  ctx.closePath();
+
+  // Füllung und Rahmen festlegen
+  ctx.fillStyle = 'red';
+  ctx.fill(); // Herz mit Farbe füllen
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = 'black';
+  ctx.stroke(); // Rahmen zeichnen
+</script>
+</body>
+</html>

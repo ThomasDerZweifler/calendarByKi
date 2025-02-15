@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funktionsplotter</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+<canvas id="plotCanvas" width="600" height="600"></canvas>
+<script>
+  const canvas = document.getElementById('plotCanvas');
+  const ctx = canvas.getContext('2d');
+
+  // Hilfsgrößen
+  const width = canvas.width;
+  const height = canvas.height;
+  const margin = 20; // Abstand vom Rand
+
+  // Koordinatensystem
+  const drawAxes = () => {
+    ctx.beginPath();
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 2;
+
+    // X-Achse
+    ctx.moveTo(margin, height / 2);
+    ctx.lineTo(width - margin, height / 2);
+
+    // Y-Achse
+    ctx.moveTo(width / 2, margin);
+    ctx.lineTo(width / 2, height - margin);
+
+    ctx.stroke();
+
+    // Achsenpfeile
+    ctx.beginPath();
+    ctx.lineWidth = 1.5;
+
+    // Pfeil X-Achse
+    ctx.moveTo(width - margin - 10, height / 2 - 5);
+    ctx.lineTo(width - margin, height / 2);
+    ctx.lineTo(width - margin - 10, height / 2 + 5);
+
+    // Pfeil Y-Achse
+    ctx.moveTo(width / 2 - 5, margin + 10);
+    ctx.lineTo(width / 2, margin);
+    ctx.lineTo(width / 2 + 5, margin + 10);
+
+    ctx.stroke();
+  };
+
+  // Funktion zeichnen (Plotter)
+  const plotFunction = (fn, color = 'red') => {
+    ctx.beginPath();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2;
+
+    const scale = 40; // Skalierungsfaktor (Pixel pro Einheit)
+    const centerX = width / 2;
+    const centerY = height / 2;
+
+    // Punkte der Funktion plotten
+    for (let x = -centerX; x < centerX; x++) {
+      const worldX = x / scale; // X-Wert in "echten" Einheiten
+      const worldY = fn(worldX); // Berechne Y-Wert der Funktion
+      const canvasX = x + centerX; // Transformiere nach Canvas-Koordinaten
+      const canvasY = centerY - worldY * scale; // Y-Achse invertieren im Canvas
+
+      if (x === -centerX) {
+        ctx.moveTo(canvasX, canvasY); // Startpunkt
+      } else {
+        ctx.lineTo(canvasX, canvasY); // Linie zeichnen
+      }
+    }
+
+    ctx.stroke();
+  };
+
+  // Koordinatensystem zeichnen
+  drawAxes();
+
+  // Funktion plotten (Beispiel: Sinusfunktion)
+  plotFunction((x) => Math.sin(x), 'blue');
+
+  // Füge hier weitere Funktionen hinzu, z.B.:
+  plotFunction((x) => Math.cos(x), 'green'); // Cosinus
+  plotFunction((x) => 0.1 * Math.pow(x, 3) - x, 'magenta'); // Kubische Funktion
+
+
+
+</script>
+</body>
+</html>
