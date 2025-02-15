@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teekessel aus Geometrien</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r150/three.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<script>
+  // Szene erstellen
+  const scene = new THREE.Scene();
+
+  // Helfer hinzufügen (zur Orientierung)
+  const axesHelper = new THREE.AxesHelper(5);
+  scene.add(axesHelper);
+
+  // Kamera erstellen
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 10; // Setze die Kamera etwas weiter entfernt, damit der Kessel sichtbar ist
+
+  // Renderer erstellen
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // Beleuchtung hinzufügen
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Grundbeleuchtung
+  scene.add(ambientLight);
+
+  const pointLight = new THREE.PointLight(0xffffff, 1.5); // Direktes Punktlicht
+  pointLight.position.set(10, 10, 10);
+  scene.add(pointLight);
+
+  // Materialien definieren
+  const goldMaterial = new THREE.MeshStandardMaterial({
+    color: 0xffd700, // Goldene Farbe
+    metalness: 1.0, // Metallischer Effekt
+    roughness: 0.2, // Glatte Oberfläche
+  });
+
+  // Kessel-Körper (Kugel)
+  const bodyGeometry = new THREE.SphereGeometry(2, 32, 32);
+  const bodyMesh = new THREE.Mesh(bodyGeometry, goldMaterial);
+  bodyMesh.position.set(0, 0, 0);
+  scene.add(bodyMesh);
+
+  // Griff (Torus)
+  const handleGeometry = new THREE.TorusGeometry(1, 0.15, 16, 100);
+  const handleMesh = new THREE.Mesh(handleGeometry, goldMaterial);
+  handleMesh.position.set(-3, 0, 0);
+  handleMesh.rotation.z = Math.PI / 2; // Griff drehen
+  scene.add(handleMesh);
+
+  // Ausguss (Zylinder)
+  const spoutGeometry = new THREE.CylinderGeometry(0.2, 0.5, 2, 32);
+  const spoutMesh = new THREE.Mesh(spoutGeometry, goldMaterial);
+  spoutMesh.position.set(3, 0.5, 0);
+  spoutMesh.rotation.z = Math.PI / 4; // Schnabel neigen
+  scene.add(spoutMesh);
+
+  // Deckel des Kessels
+  const lidGeometry = new THREE.SphereGeometry(1, 32, 32);
+  const lidMesh = new THREE.Mesh(lidGeometry, goldMaterial);
+  lidMesh.position.set(0, 2, 0); // Oben auf der Kugel
+  lidMesh.scale.set(0.6, 0.6, 0.6); // Verkleinerung
+  scene.add(lidMesh);
+
+  // Knauf (kleine Kugel auf dem Deckel)
+  const knobGeometry = new THREE.SphereGeometry(0.2, 32, 32);
+  const knobMesh = new THREE.Mesh(knobGeometry, goldMaterial);
+  knobMesh.position.set(0, 2.7, 0); // Knauf weiter oben platzieren
+  scene.add(knobMesh);
+
+  // Debug: Gitter hinzufügen, um Orientierung zu verbessern
+  const gridHelper = new THREE.GridHelper(20, 20); // Ein sichtbares Raster
+  scene.add(gridHelper);
+
+  // Animation
+  const animate = () => {
+    requestAnimationFrame(animate);
+
+    // Drehende Bewegung
+    bodyMesh.rotation.y += 0.01;
+    handleMesh.rotation.y += 0.01;
+    spoutMesh.rotation.y += 0.01;
+    lidMesh.rotation.y += 0.01;
+    knobMesh.rotation.y += 0.01;
+
+    renderer.render(scene, camera);
+  };
+
+  animate();
+
+  // Fenstergröße dynamisch anpassen
+  window.addEventListener("resize", () => {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  });
+</script>
+</body>
+</html>
