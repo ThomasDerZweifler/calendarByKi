@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Schriftzug mit Herz</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<script>
+  // Szene, Kamera und Renderer erstellen
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer();
+
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // Beleuchtung hinzufügen
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.8); // Umgebungslicht, heller
+  const pointLight = new THREE.PointLight(0xffffff, 1.5, 100); // Punktlicht, sehr hell
+  pointLight.position.set(10, 10, 10);
+
+  scene.add(ambientLight);
+  scene.add(pointLight);
+
+  // Helfer hinzufügen (zur Orientierung)
+  const axesHelper = new THREE.AxesHelper(5);
+  scene.add(axesHelper);
+
+  const gridHelper = new THREE.GridHelper(20, 20); // Ein sichtbares Raster
+  scene.add(gridHelper);
+
+  // Funktion zur Erstellung eines Herz-Objekts
+  function createHeart() {
+    const heartShape = new THREE.Shape();
+
+    // Herz-Shape erstellen
+    heartShape.moveTo(0, 0.5);
+    heartShape.bezierCurveTo(0, 1.5, -1, 1.5, -1, 0.5);
+    heartShape.bezierCurveTo(-1, -0.5, 0, -0.7, 0, -1);
+    heartShape.bezierCurveTo(0, -0.7, 1, -0.5, 1, 0.5);
+    heartShape.bezierCurveTo(1, 1.5, 0, 1.5, 0, 0.5);
+
+    // Geometrie und Material für das Herz
+    const _heartGeometry = new THREE.ExtrudeGeometry(heartShape, {
+      depth: 0.3, // Tiefe des 3D-Effekts
+      bevelEnabled: true,
+      bevelSegments: 5,
+      steps: 1,
+      bevelSize: 0.02,
+      bevelThickness: 0.03,
+    });
+
+    const heartGeometry = new THREE.BoxGeometry(2, 2, 2);
+
+    heartGeometry.center(); // Das Herz zentrieren
+    const heartMaterial = new THREE.MeshStandardMaterial({ color: '#ff4d4d' }); // Helles Rot
+    const heartMesh = new THREE.Mesh(heartGeometry, heartMaterial);
+
+    return heartMesh;
+  }
+
+  // Herz erstellen und hinzufügen
+  const heartMesh = createHeart();
+  heartMesh.position.set(0, -3, 0); // Position des Herzens (größerer Abstand unterhalb vom Schriftzug)
+  scene.add(heartMesh);
+
+  // 3D Schriftzug laden
+  const loader = new THREE.FontLoader();
+  loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font) {
+    const textGeometry = new THREE.TextGeometry('Stefan, ich liebe Dich!', {
+      font: font,
+      size: 1,
+      height: 0.5,
+      curveSegments: 12,
+      bevelEnabled: true,
+      bevelThickness: 0.03,
+      bevelSize: 0.02,
+      bevelSegments: 5,
+    });
+
+    // Text zentrieren
+    textGeometry.center();
+
+    // Textmaterial anpassen
+    const textMaterial = new THREE.MeshStandardMaterial({ color: '#ff4d4d' }); // Helles Rot
+    const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+    scene.add(textMesh);
+
+    // Animation
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Schriftzug vertikal drehen
+      textMesh.rotation.z += 0.01;
+
+      // Herz leicht drehen
+      heartMesh.rotation.z -= 0.01;
+
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  });
+
+  // Kamera-Position
+  camera.position.z = 10;
+
+  // Größenänderung des Fensters behandeln
+  window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  });
+</script>
+</body>
+</html>
