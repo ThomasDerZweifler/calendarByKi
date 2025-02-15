@@ -20,11 +20,17 @@
       text-align: center;
       padding: 8px;
     }
+    /* Tabellenköpfe (Überschriften) in Hellblau */
     th {
-      background-color: #f4f4f4;
+      background-color: #add8e6; /* Hellblau */
+      color: #000; /* Schwarzer Text für Kontrast */
     }
     .month {
       margin-top: 30px;
+    }
+    /* Ungerade Zeilen dunkler darstellen */
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
     }
   </style>
 </head>
