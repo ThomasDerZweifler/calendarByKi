@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtuelle Klaviatur mit Klaviersound</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    .keyboard {
+      display: flex;
+      position: relative;
+      border: 2px solid #aaa;
+      background: #fff;
+    }
+    .key {
+      width: 60px;
+      height: 200px;
+      border: 1px solid #000;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      font-size: 14px;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+    }
+    .key:active {
+      background-color: #ccc;
+    }
+    .key.black {
+      width: 40px;
+      height: 120px;
+      background: #000;
+      color: #fff;
+      border: none;
+      position: absolute;
+      z-index: 10;
+      left: 75%;
+      transform: translateX(-50%);
+    }
+    .key.black:active {
+      background-color: #555;
+    }
+    .key span {
+      padding: 5px;
+      color: #333;
+    }
+
+    /* Position der schwarzen Tasten */
+    .key.black[data-position="1"] { left: 45px; }
+    .key.black[data-position="2"] { left: 105px; }
+    .key.black[data-position="3"] { left: 225px; }
+    .key.black[data-position="4"] { left: 285px; }
+    .key.black[data-position="5"] { left: 345px; }
+  </style>
+</head>
+<body>
+  <h1>Virtuelle Klaviatur mit Klaviersound</h1>
+  <div class="keyboard">
+    <div class="key" data-note="C4">C</div>
+    <div class="key black" data-note="C#4" data-position="1"></div>
+    <div class="key" data-note="D4">D</div>
+    <div class="key black" data-note="D#4" data-position="2"></div>
+    <div class="key" data-note="E4">E</div>
+    <div class="key" data-note="F4">F</div>
+    <div class="key black" data-note="F#4" data-position="3"></div>
+    <div class="key" data-note="G4">G</div>
+    <div class="key black" data-note="G#4" data-position="4"></div>
+    <div class="key" data-note="A4">A</div>
+    <div class="key black" data-note="A#4" data-position="5"></div>
+    <div class="key" data-note="B4">B</div>
+    <div class="key" data-note="C5">C</div>
+  </div>
+
+  <script>
+    // Map von Tasten-Noten zu Audio-Dateien (Samples)
+    //https://pixabay.com/sound-effects/search/klavier/
+    const audioFiles = {
+      'C4': 'sounds/c.mp3',
+      'C#4': 'sounds/Cs4.mp3',
+      'D4': 'sounds/D4.aiff',
+      'D#4': 'sounds/Ds4.mp3',
+      'E4': 'sounds/E4.mp3',
+      'F4': 'sounds/f.mp3',
+      'F#4': 'sounds/Fs4.mp3',
+      'G4': 'sounds/G4.mp3',
+      'G#4': 'sounds/Gs4.mp3',
+      'A4': 'sounds/a.mp3',
+      'A#4': 'sounds/As4.mp3',
+      'B4': 'sounds/B4.mp3',
+      'C5': 'sounds/C5.mp3'
+    };
+
+    // Funktion, die den Klavierton abspielt
+    const playSound = (note) => {
+      if (audioFiles[note]) {
+        const audio = new Audio(audioFiles[note]); // Audio-Objekt erstellen
+        audio.play(); // Audio abspielen
+      }
+    };
+
+    // Event-Listener für alle Tasten
+    document.querySelectorAll('.key').forEach(key => {
+      key.addEventListener('mousedown', () => {
+        const note = key.getAttribute('data-note');
+        playSound(note);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bf248260-479f-4063-bbd0-1264de89c3cd" name="Changes" comment="geometry tests" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ThomasDerZweifler&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ThomasDerZweifler/calendarByKi.git&quot;,
+    &quot;accountId&quot;: &quot;2e0de8c1-ca44-41cd-ad76-82a53fd7115a&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2t4MBjK6I6zSqNSUIWIG2JM20ob" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.3DCubeSceneAnimation.html.executor": "Run",
+    "JavaScript Debug.3DHeartAnimationScene.html.executor": "Run",
+    "JavaScript Debug.3DHeartAnimationScene2.html.executor": "Run",
+    "JavaScript Debug.3DModelViewerTeapot.html.executor": "Run",
+    "JavaScript Debug.3DTextAnimationScene.html.executor": "Run",
+    "JavaScript Debug.3DTextScene.html.executor": "Run",
+    "JavaScript Debug.3DTextSceneAnimation.html.executor": "Run",
+    "JavaScript Debug.function_plotter.html.executor": "Run",
+    "JavaScript Debug.heart_shape_animation_scene.html.executor": "Run",
+    "JavaScript Debug.heart_shape_canvas.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.play_trumpet_app.html.executor": "Run",
+    "JavaScript Debug.rainbow_text3_d_animation.html.executor": "Run",
+    "JavaScript Debug.rainbow_text_animation.html.executor": "Run",
+    "JavaScript Debug.rainbow_text_animation2.html.executor": "Run",
+    "JavaScript Debug.rainbow_text_animation3.html.executor": "Run",
+    "JavaScript Debug.rotating_cube_scene.html.executor": "Run",
+    "JavaScript Debug.rotating_teapot_animation.html.executor": "Run",
+    "JavaScript Debug.rotating_teapot_scene.html.executor": "Run",
+    "JavaScript Debug.teapot.html.executor": "Run",
+    "JavaScript Debug.teapot3_d_model_viewer.html.executor": "Run",
+    "JavaScript Debug.teapot3_d_scene.html.executor": "Run",
+    "JavaScript Debug.teapot_animation_scene.html.executor": "Run",
+    "JavaScript Debug.teapot_scene.html.executor": "Run",
+    "JavaScript Debug.teapot_scene2.html.executor": "Run",
+    "JavaScript Debug.teapot_scene_animation.html.executor": "Run",
+    "JavaScript Debug.teekessel_animation.html.executor": "Run",
+    "JavaScript Debug.teekessel_scene.html.executor": "Run",
+    "JavaScript Debug.teekessel_szene.html.executor": "Run",
+    "JavaScript Debug.three_j_s_scene_with_cube.html.executor": "Run",
+    "JavaScript Debug.three_js_cube_animation.html.executor": "Run",
+    "JavaScript Debug.virtual_keyboard.html.executor": "Run",
+    "JavaScript Debug.virtual_piano_with_sound.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf248260-479f-4063-bbd0-1264de89c3cd" name="Changes" comment="" />
+      <created>1739606760057</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739606760057</updated>
+      <workItem from="1739606761231" duration="6151000" />
+      <workItem from="1739616273821" duration="834000" />
+      <workItem from="1739618035257" duration="1573000" />
+    </task>
+    <task id="LOCAL-00001" summary="readme">
+      <option name="closed" value="true" />
+      <created>1739607193205</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739607193205</updated>
+    </task>
+    <task id="LOCAL-00002" summary="teapot geometry">
+      <option name="closed" value="true" />
+      <created>1739613523378</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739613523378</updated>
+    </task>
+    <task id="LOCAL-00003" summary="geometry tests">
+      <option name="closed" value="true" />
+      <created>1739616296779</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739616296779</updated>
+    </task>
+    <task id="LOCAL-00004" summary="geometry tests">
+      <option name="closed" value="true" />
+      <created>1739617002470</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739617002470</updated>
+    </task>
+    <task id="LOCAL-00005" summary="geometry tests">
+      <option name="closed" value="true" />
+      <created>1739618514048</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739618514048</updated>
+    </task>
+    <task id="LOCAL-00006" summary="geometry tests">
+      <option name="closed" value="true" />
+      <created>1739618646934</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739618646934</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="readme" />
+    <MESSAGE value="teapot geometry" />
+    <MESSAGE value="geometry tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="geometry tests" />
+  </component>
+</project>

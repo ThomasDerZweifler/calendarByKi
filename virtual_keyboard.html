@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtuelle Klaviatur</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    .keyboard {
+      display: flex;
+      position: relative;
+      border: 2px solid #aaa;
+      background: #fff;
+    }
+    .key {
+      width: 60px;
+      height: 200px;
+      border: 1px solid #000;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      font-size: 14px;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+    }
+    .key:active {
+      background-color: #ccc;
+    }
+    .key.black {
+      width: 40px;
+      height: 120px;
+      background: #000;
+      color: #fff;
+      border: none;
+      position: absolute;
+      z-index: 10;
+      left: 75%;
+      transform: translateX(-50%);
+    }
+    .key.black:active {
+      background-color: #555;
+    }
+    .key span {
+      padding: 5px;
+      color: #333;
+    }
+
+    /* Position der schwarzen Tasten */
+    .key.black[data-position="1"] { left: 45px; }
+    .key.black[data-position="2"] { left: 105px; }
+    .key.black[data-position="3"] { left: 225px; }
+    .key.black[data-position="4"] { left: 285px; }
+    .key.black[data-position="5"] { left: 345px; }
+  </style>
+</head>
+<body>
+  <h1>Virtuelle Klaviatur</h1>
+  <div class="keyboard">
+    <div class="key" data-note="C4">C</div>
+    <div class="key black" data-note="C#4" data-position="1"></div>
+    <div class="key" data-note="D4">D</div>
+    <div class="key black" data-note="D#4" data-position="2"></div>
+    <div class="key" data-note="E4">E</div>
+    <div class="key" data-note="F4">F</div>
+    <div class="key black" data-note="F#4" data-position="3"></div>
+    <div class="key" data-note="G4">G</div>
+    <div class="key black" data-note="G#4" data-position="4"></div>
+    <div class="key" data-note="A4">A</div>
+    <div class="key black" data-note="A#4" data-position="5"></div>
+    <div class="key" data-note="B4">B</div>
+    <div class="key" data-note="C5">C</div>
+  </div>
+
+  <script>
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    // Frequenzen der Noten
+    const noteFrequencies = {
+      'C4': 261.63,
+      'C#4': 277.18,
+      'D4': 293.66,
+      'D#4': 311.13,
+      'E4': 329.63,
+      'F4': 349.23,
+      'F#4': 369.99,
+      'G4': 392.00,
+      'G#4': 415.30,
+      'A4': 440.00,
+      'A#4': 466.16,
+      'B4': 493.88,
+      'C5': 523.25
+    };
+
+    // Funktion, um Ton abzuspielen
+    const playNote = (frequency) => {
+      const oscillator = audioContext.createOscillator(); // Tonerzeuger
+      const gainNode = audioContext.createGain(); // Lautstärkeregler
+
+      oscillator.type = 'sine'; // Klangtyp: "sine", "square", "sawtooth", "triangle"
+      oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime); // Frequenz
+
+      gainNode.gain.setValueAtTime(0.2, audioContext.currentTime); // Lautstärke
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+
+      oscillator.start(); // Ton starten
+      oscillator.stop(audioContext.currentTime + 0.5); // Nach 0.5 Sekunden stoppt der Ton
+    };
+
+    // Event-Listener für die Klaviertasten
+    document.querySelectorAll('.key').forEach(key => {
+      key.addEventListener('mousedown', () => {
+        const note = key.getAttribute('data-note');
+        if (noteFrequencies[note]) {
+          playNote(noteFrequencies[note]);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
