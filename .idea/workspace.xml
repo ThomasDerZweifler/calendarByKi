@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf248260-479f-4063-bbd0-1264de89c3cd" name="Changes" comment="Klavier">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3DHeartAnimationScene2.html" beforeDir="false" afterPath="$PROJECT_DIR$/3DHeartAnimationScene2.html" afterDir="false" />
-    </list>
+    <list default="true" id="bf248260-479f-4063-bbd0-1264de89c3cd" name="Changes" comment="ws" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,54 +36,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.3DCubeSceneAnimation.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.3DHeartAnimationScene.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.3DHeartAnimationScene2.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.3DModelViewerTeapot.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.3DTextAnimationScene.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.3DTextScene.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.3DTextSceneAnimation.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.function_plotter.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.heart_shape_animation_scene.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.heart_shape_canvas.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.play_trumpet_app.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.rainbow_text3_d_animation.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.rainbow_text_animation.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.rainbow_text_animation2.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.rainbow_text_animation3.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.rotating_cube_scene.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.rotating_teapot_animation.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.rotating_teapot_scene.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.teapot.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.teapot3_d_model_viewer.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.teapot3_d_scene.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.teapot_animation_scene.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.teapot_scene.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.teapot_scene2.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.teapot_scene_animation.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.teekessel_animation.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.teekessel_scene.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.teekessel_szene.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.three_j_s_scene_with_cube.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.three_js_cube_animation.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.virtual_keyboard.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.virtual_piano_with_sound.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.3DCubeSceneAnimation.html.executor": "Run",
+    "JavaScript Debug.3DHeartAnimationScene.html.executor": "Run",
+    "JavaScript Debug.3DHeartAnimationScene2.html.executor": "Run",
+    "JavaScript Debug.3DModelViewerTeapot.html.executor": "Run",
+    "JavaScript Debug.3DTextAnimationScene.html.executor": "Run",
+    "JavaScript Debug.3DTextScene.html.executor": "Run",
+    "JavaScript Debug.3DTextSceneAnimation.html.executor": "Run",
+    "JavaScript Debug.annual_calendar2025.html.executor": "Run",
+    "JavaScript Debug.function_plotter.html.executor": "Run",
+    "JavaScript Debug.heart_shape_animation_scene.html.executor": "Run",
+    "JavaScript Debug.heart_shape_canvas.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.play_trumpet_app.html.executor": "Run",
+    "JavaScript Debug.rainbow_text3_d_animation.html.executor": "Run",
+    "JavaScript Debug.rainbow_text_animation.html.executor": "Run",
+    "JavaScript Debug.rainbow_text_animation2.html.executor": "Run",
+    "JavaScript Debug.rainbow_text_animation3.html.executor": "Run",
+    "JavaScript Debug.rotating_cube_scene.html.executor": "Run",
+    "JavaScript Debug.rotating_teapot_animation.html.executor": "Run",
+    "JavaScript Debug.rotating_teapot_scene.html.executor": "Run",
+    "JavaScript Debug.teapot.html.executor": "Run",
+    "JavaScript Debug.teapot3_d_model_viewer.html.executor": "Run",
+    "JavaScript Debug.teapot3_d_scene.html.executor": "Run",
+    "JavaScript Debug.teapot_animation_scene.html.executor": "Run",
+    "JavaScript Debug.teapot_scene.html.executor": "Run",
+    "JavaScript Debug.teapot_scene2.html.executor": "Run",
+    "JavaScript Debug.teapot_scene_animation.html.executor": "Run",
+    "JavaScript Debug.teekessel_animation.html.executor": "Run",
+    "JavaScript Debug.teekessel_scene.html.executor": "Run",
+    "JavaScript Debug.teekessel_szene.html.executor": "Run",
+    "JavaScript Debug.three_j_s_scene_with_cube.html.executor": "Run",
+    "JavaScript Debug.three_js_cube_animation.html.executor": "Run",
+    "JavaScript Debug.virtual_keyboard.html.executor": "Run",
+    "JavaScript Debug.virtual_piano_with_sound.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -105,7 +103,7 @@
       <workItem from="1739606761231" duration="6151000" />
       <workItem from="1739616273821" duration="834000" />
       <workItem from="1739618035257" duration="1600000" />
-      <workItem from="1739619764679" duration="1004000" />
+      <workItem from="1739619764679" duration="1493000" />
     </task>
     <task id="LOCAL-00001" summary="readme">
       <option name="closed" value="true" />
@@ -163,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739619630124</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="ws">
+      <option name="closed" value="true" />
+      <created>1739652663162</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1739652663162</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +180,7 @@
     <MESSAGE value="teapot geometry" />
     <MESSAGE value="geometry tests" />
     <MESSAGE value="Klavier" />
-    <option name="LAST_COMMIT_MESSAGE" value="Klavier" />
+    <MESSAGE value="ws" />
+    <option name="LAST_COMMIT_MESSAGE" value="ws" />
   </component>
 </project>
