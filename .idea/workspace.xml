@@ -48,6 +48,7 @@
     "JavaScript Debug.annual_calendar2025.html.executor": "Run",
     "JavaScript Debug.chart.html.executor": "Run",
     "JavaScript Debug.chartTable.html.executor": "Run",
+    "JavaScript Debug.earth.html.executor": "Run",
     "JavaScript Debug.function_plotter.html.executor": "Run",
     "JavaScript Debug.heart_shape_animation_scene.html.executor": "Run",
     "JavaScript Debug.heart_shape_canvas.html.executor": "Run",
@@ -89,6 +90,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -108,7 +114,7 @@
       <workItem from="1739616273821" duration="834000" />
       <workItem from="1739618035257" duration="1600000" />
       <workItem from="1739619764679" duration="3218000" />
-      <workItem from="1739711309243" duration="340000" />
+      <workItem from="1739711309243" duration="1065000" />
     </task>
     <task id="LOCAL-00001" summary="readme">
       <option name="closed" value="true" />
@@ -198,7 +204,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739711424909</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="charts">
+      <option name="closed" value="true" />
+      <created>1739711657409</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1739711657409</updated>
+    </task>
+    <task id="LOCAL-00013" summary="charts">
+      <option name="closed" value="true" />
+      <created>1739711717184</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1739711717184</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
