@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf248260-479f-4063-bbd0-1264de89c3cd" name="Changes" comment="teapot" />
+    <list default="true" id="bf248260-479f-4063-bbd0-1264de89c3cd" name="Changes" comment="charts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +46,8 @@
     "JavaScript Debug.3DTextScene.html.executor": "Run",
     "JavaScript Debug.3DTextSceneAnimation.html.executor": "Run",
     "JavaScript Debug.annual_calendar2025.html.executor": "Run",
+    "JavaScript Debug.chart.html.executor": "Run",
+    "JavaScript Debug.chartTable.html.executor": "Run",
     "JavaScript Debug.function_plotter.html.executor": "Run",
     "JavaScript Debug.heart_shape_animation_scene.html.executor": "Run",
     "JavaScript Debug.heart_shape_canvas.html.executor": "Run",
@@ -77,6 +79,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/thomasfunke/WebstormProjects/calendarByKi",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -105,6 +108,7 @@
       <workItem from="1739616273821" duration="834000" />
       <workItem from="1739618035257" duration="1600000" />
       <workItem from="1739619764679" duration="3218000" />
+      <workItem from="1739711309243" duration="340000" />
     </task>
     <task id="LOCAL-00001" summary="readme">
       <option name="closed" value="true" />
@@ -186,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739710877194</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="charts">
+      <option name="closed" value="true" />
+      <created>1739711424909</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1739711424909</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +212,7 @@
     <MESSAGE value="ws" />
     <MESSAGE value="calendar without js" />
     <MESSAGE value="teapot" />
-    <option name="LAST_COMMIT_MESSAGE" value="teapot" />
+    <MESSAGE value="charts" />
+    <option name="LAST_COMMIT_MESSAGE" value="charts" />
   </component>
 </project>
