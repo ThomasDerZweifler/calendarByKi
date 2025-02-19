@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Hallo Welt im HTML!</h1>
+<div id="my-text-box"></div>
+<h1>und noch was im HTML!</h1>
+<script>
+    //alert("Hallo Welt from js!");
+    const output = document.getElementById("my-text-box");
+
+    //h1(output);
+
+    textNode(output);
+
+    function h1(output) {
+        const h1 = document.createElement("h1");
+        h1.textContent = "H1 von js!";
+        output.append(h1);
+    }
+
+    function textNode(output) {
+        const text = document.createTextNode("<h1>TextNode von js!</h1>");
+        output.innerText = text.wholeText;
+        //output.append(text);
+    }
+</script>
+</body>
+</html>
