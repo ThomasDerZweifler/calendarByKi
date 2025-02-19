@@ -7,26 +7,44 @@
 </head>
 <body>
 <h1>Hallo Welt im HTML!</h1>
-<div id="my-text-box"></div>
+<div id="myTextBox"></div>
+<canvas id="myCanvas" width="300" height="100" style="border:1px solid grey;">
+    Sorry, your browser does not support canvas.
+</canvas>
 <h1>und noch was im HTML!</h1>
 <script>
     //alert("Hallo Welt from js!");
-    const output = document.getElementById("my-text-box");
+    const output = document.getElementById("myTextBox");
 
-    //h1(output);
+    h1(output);
 
     textNode(output);
 
+    draw();
+
+    console.log("URL (js): " + document.URL);
+
+    console.log("Navigator (js): " + navigator.userAgent);
+
+    function draw() {
+        const element = document.getElementById('myCanvas');
+
+        const ctx = element.getContext("2d");
+
+        ctx.font = "50px SansSerife";
+        ctx.fillText("Canvas Text (js)", 20, 50);
+    }
+
     function h1(output) {
         const h1 = document.createElement("h1");
-        h1.textContent = "H1 von js!";
+        h1.textContent = "H1 von (js)";
         output.append(h1);
     }
 
     function textNode(output) {
-        const text = document.createTextNode("<h1>TextNode von js!</h1>");
-        output.innerText = text.wholeText;
-        //output.append(text);
+        const text = document.createTextNode("<h1>TextNode (js)</h1>");
+        //output.innerText = text.wholeText;
+        output.append(text);
     }
 </script>
 </body>
